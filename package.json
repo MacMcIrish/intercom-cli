@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/MacMcIrish/intercom-cli#readme",
   "devDependencies": {
-    "js-gardener": "1.10.11",
+    "js-gardener": "1.10.12",
     "coveralls": "3.0.0",
     "semantic-release": "11.0.2"
   },
