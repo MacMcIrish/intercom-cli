@@ -13,3 +13,7 @@ npm-debug.log
 # Test Specific
 coverage/
 .coveralls.yml
+
+# Custom
+/config/*.yml
+!/config/template.yml

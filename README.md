@@ -6,43 +6,35 @@
 [![Downloads](https://img.shields.io/npm/dt/intercom-cli.svg)](https://www.npmjs.com/package/intercom-cli)
 [![Semantic-Release](https://github.com/simlu/js-gardener/blob/master/assets/icons/semver.svg)](https://github.com/semantic-release/semantic-release)
 [![Gardener](https://github.com/simlu/js-gardener/blob/master/assets/badge.svg)](https://github.com/simlu/js-gardener)
-[![Gitter](https://github.com/simlu/js-gardener/blob/master/assets/icons/gitter.svg)](https://gitter.im/MacMcIrish/intercom-cli)# Project Title
+[![Gitter](https://github.com/simlu/js-gardener/blob/master/assets/icons/gitter.svg)](https://gitter.im/MacMcIrish/intercom-cli)
+# Intercom CLI
 
-One Paragraph of project description goes here
+Command Line Interface for managing intercom data
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
+Node, NPM, grunt, grunt-cli
 
-What things you need to install the software and how to install them
 
-```
-Give examples
-```
+### Configuration
+
+Copy `template.yml` to desired environment names eg: `prod.yml` and fill in tokens.
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+...
 
-Say what the step will be
+### How to use
 
-```
-Give the example
-```
+Run `node CMD --env ENVIRONMENT`
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+Where `CMD` is the command you're trying to execute and `ENVIRONMENT` corresponds to the yml file in the config folder.
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+  $ npm test -- --debug
 
 ### Break down into end to end tests
 
@@ -76,7 +68,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
 
