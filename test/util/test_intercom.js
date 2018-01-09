@@ -17,7 +17,7 @@ describe("Testing Intercom", () => {
     nockBack(`intercom-users-scroll.json`, {}, (nockDone) => {
       intercom.users.scroll((r) => {
         expect(r.body.users.length).to.be.at.most(100);
-        if (r.body.users.length !== 100) {
+        if (r.body.users.length === 0) {
           nockDone();
           done();
         }
