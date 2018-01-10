@@ -15,9 +15,10 @@ describe("Testing Intercom", () => {
   it("Testing User Scrolling", function (done) {
     this.timeout(60000);
     nockBack(`intercom-users-scroll.json`, {}, (nockDone) => {
-      intercom.users.scroll((r, completed) => {
-        expect(r.body.users.length).to.be.at.most(100);
-        if (completed) {
+      intercom.users.scroll((r) => {
+        if (r !== null) {
+          expect(r.body.users.length).to.be.at.most(100);
+        } else {
           nockDone();
           done();
         }
