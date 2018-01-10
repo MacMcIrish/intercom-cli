@@ -1,0 +1,84 @@
+[
+  {
+    "scope": "https://api.intercom.io:443",
+    "method": "get",
+    "path": "/users/scroll",
+    "body": "",
+    "status": 200,
+    "response": {
+      "type": "user.list",
+      "users": [
+        {
+          "type": "user",
+          "id": "000000000000000000000000",
+          "user_id": "00000000000000000000000000000000",
+          "anonymous": false,
+          "email": "email@email.ca",
+          "phone": null,
+          "name": "First Last",
+          "pseudonym": null,
+          "avatar": {
+            "type": "avatar",
+            "image_url": null
+          },
+          "app_id": "app_id",
+          "companies": {
+            "type": "company.list",
+            "companies": []
+          },
+          "location_data": {
+            "type": "location_data",
+            "city_name": null,
+            "continent_code": null,
+            "country_name": null,
+            "latitude": null,
+            "longitude": null,
+            "postal_code": null,
+            "region_name": null,
+            "timezone": null,
+            "country_code": null
+          },
+          "last_request_at": null,
+          "last_seen_ip": null,
+          "created_at": 1481676081,
+          "remote_created_at": 1481676078,
+          "signed_up_at": 1481676078,
+          "updated_at": 1506038375,
+          "session_count": 0,
+          "social_profiles": {
+            "type": "social_profile.list",
+            "social_profiles": []
+          },
+          "unsubscribed_from_emails": false,
+          "marked_email_as_spam": false,
+          "has_hard_bounced": false,
+          "user_agent_data": null,
+          "tags": {
+            "type": "tag.list",
+            "tags": []
+          },
+          "segments": {
+            "type": "segment.list",
+            "segments": []
+          },
+          "custom_attributes": {
+            "role": "manager"
+          }
+        }
+      ],
+      "scroll_param": "ac921f22-bc43-40ec-b412-fb455b00a619"
+    }
+  },
+  {
+    "scope": "https://api.intercom.io:443",
+    "method": "get",
+    "path": "/users/scroll?scroll_param=ac921f22-bc43-40ec-b412-fb455b00a619",
+    "body": "",
+    "status": 200,
+    "response": {
+      "type": "user.list",
+      "users": [],
+      "scroll_param": "ac921f22-bc43-40ec-b412-fb455b00a619"
+    }
+  }
+]

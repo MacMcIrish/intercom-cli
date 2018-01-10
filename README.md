@@ -38,9 +38,9 @@ Where `CMD` is the command you're trying to execute and `ENVIRONMENT` correspond
 
 To download all users to `<file>` in `out` directory, run:
 
-    $ node ./intercom-cli.js users fetch <file> --env ENVIRONMENT
+    $ node ./intercom-cli.js users fetch <file> [dir] --env ENVIRONMENT
 
-Where `<file>` is relative file path in `out` directory.
+Where `<file>` is relative file path in `dir` directory, where `dir` defaults to the `out` directory.
 
 ## Running the tests
 
