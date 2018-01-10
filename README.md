@@ -28,13 +28,23 @@ Copy `template.yml` to desired environment names eg: `prod.yml` and fill in toke
 
 ### How to use
 
-Run `node CMD --env ENVIRONMENT`
+Run `node ./intercom-cli.js CMD --env ENVIRONMENT`
 
 Where `CMD` is the command you're trying to execute and `ENVIRONMENT` corresponds to the yml file in the config folder.
 
+### Commands
+
+#### users
+
+To download all users to `<file>` in `out` directory, run:
+
+    $ node ./intercom-cli.js users fetch <file> --env ENVIRONMENT
+
+Where `<file>` is relative file path in `out` directory.
+
 ## Running the tests
 
-  $ npm test -- --debug
+    $ npm test -- --debug
 
 ### Break down into end to end tests
 
