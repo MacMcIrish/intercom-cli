@@ -26,4 +26,13 @@ describe("Testing Intercom", () => {
       });
     });
   });
+
+  it("Testing User Updating", done => nockBack('intercom-users-update.json', {}, nockDone => intercom.users
+    .update({ user_id: '00000000000000000000000000000000', name: 'First Last' })
+    .then((result) => {
+      expect(result.statusCode).to.equal(200);
+      expect(result.body.name).to.equal('First Last');
+      nockDone();
+      done();
+    })));
 });
