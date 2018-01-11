@@ -9,7 +9,7 @@ describe("Testing CSV", () => {
 
   beforeEach(() => {
     tmpobj = tmp.fileSync();
-    csvUtil = csv(tmpobj.name, ["foo"]);
+    csvUtil = csv.write(tmpobj.name, ["foo"]);
   });
 
   afterEach(() => {
@@ -37,5 +37,27 @@ describe("Testing CSV", () => {
 
   it("Testing Writing Invalid Param Type", () => {
     expect(csvUtil.append.bind(csvUtil, 'test')).to.throw('Data must be instance of Array or Object.');
+  });
+
+  it("Testing Reading Users from CSV", (done) => {
+    fs.writeFileSync(tmpobj.name, 'id,name\nfoo,bar\nbaz,qux');
+    csv.read(tmpobj.name).then((users) => {
+      expect(users).to.deep.equal([{
+        id: 'foo',
+        name: 'bar'
+      }, {
+        id: 'baz',
+        name: 'qux'
+      }]);
+      done();
+    });
+  });
+
+  it("Testing Reading CSV Error", (done) => {
+    fs.writeFileSync(tmpobj.name, 'id,name\nfoo,,bar\nbaz,qux');
+    csv.read(tmpobj.name).catch((err) => {
+      expect(err.message).to.equal("Number of columns is inconsistent on line 2");
+      done();
+    });
   });
 });
