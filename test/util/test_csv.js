@@ -5,24 +5,27 @@ const tmp = require('tmp');
 
 describe("Testing CSV", () => {
   let csvUtil;
-  let tmpobj;
+  let csvFile;
+  let tmpFile;
 
   beforeEach(() => {
-    tmpobj = tmp.fileSync();
-    csvUtil = csv.write(tmpobj.name, ["foo"]);
+    tmpFile = tmp.fileSync();
+    csvFile = tmp.fileSync();
+    csvUtil = csv.writer(csvFile.name, ["foo"]);
   });
 
   afterEach(() => {
     csvUtil.close();
-    tmpobj.removeCallback();
+    csvFile.removeCallback();
+    tmpFile.removeCallback();
   });
 
   it("Testing Writing", (done) => {
     csvUtil.append({ foo: 'object' });
     csvUtil.append(['array']);
     csvUtil.close().then(() => {
-      expect(fs.existsSync(tmpobj.name)).to.equal(true);
-      expect(fs.readFileSync(tmpobj.name, 'utf8')).to.equal('foo\nobject\narray\n');
+      expect(fs.existsSync(csvFile.name)).to.equal(true);
+      expect(fs.readFileSync(csvFile.name, 'utf8')).to.equal('foo\nobject\narray\n');
       done();
     });
   });
@@ -40,8 +43,8 @@ describe("Testing CSV", () => {
   });
 
   it("Testing Reading Users from CSV", (done) => {
-    fs.writeFileSync(tmpobj.name, 'id,name\nfoo,bar\nbaz,qux');
-    csv.read(tmpobj.name).then((users) => {
+    fs.writeFileSync(tmpFile.name, 'id,name\nfoo,bar\nbaz,qux');
+    csv.read(tmpFile.name).then((users) => {
       expect(users).to.deep.equal([{
         id: 'foo',
         name: 'bar'
@@ -54,8 +57,8 @@ describe("Testing CSV", () => {
   });
 
   it("Testing Reading CSV Error", (done) => {
-    fs.writeFileSync(tmpobj.name, 'id,name\nfoo,,bar\nbaz,qux');
-    csv.read(tmpobj.name).catch((err) => {
+    fs.writeFileSync(tmpFile.name, 'id,name\nfoo,,bar\nbaz,qux');
+    csv.read(tmpFile.name).catch((err) => {
       expect(err.message).to.equal("Number of columns is inconsistent on line 2");
       done();
     });
