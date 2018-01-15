@@ -1,0 +1,75 @@
+[
+  {
+    "scope": "https://api.intercom.io:443",
+    "method": "post",
+    "path": "/users",
+    "body": {
+      "email": "email@email.com",
+      "name": "First Last",
+      "user_id": "00000000000000000000000000000000"
+    },
+    "status": 200,
+    "response": {},
+    "rawHeaders": []
+  },
+  {
+    "scope": "https://api.intercom.io:443",
+    "method": "post",
+    "path": "/users",
+    "body": {
+      "email": "email@email.com",
+      "name": "First Last",
+      "user_id": "00000000000000000000000000000000"
+    },
+    "status": 200,
+    "response": {},
+    "rawHeaders": [
+      "X-RateLimit-Limit",
+      "83",
+      "X-RateLimit-Remaining",
+      "83",
+      "X-RateLimit-Reset",
+      "1516044020"
+    ]
+  },
+  {
+    "scope": "https://api.intercom.io:443",
+    "method": "post",
+    "path": "/users",
+    "body": {
+      "email": "email@email.com",
+      "name": "First Last",
+      "user_id": "00000000000000000000000000000000"
+    },
+    "status": 200,
+    "response": {},
+    "rawHeaders": [
+      "X-RateLimit-Limit",
+      "83",
+      "X-RateLimit-Remaining",
+      "82",
+      "X-RateLimit-Reset",
+      "1516044020"
+    ]
+  },
+  {
+    "scope": "https://api.intercom.io:443",
+    "method": "post",
+    "path": "/users",
+    "body": {
+      "email": "email@email.com",
+      "name": "First Last",
+      "user_id": "00000000000000000000000000000000"
+    },
+    "status": 200,
+    "response": {},
+    "rawHeaders": [
+      "X-RateLimit-Limit",
+      "83",
+      "X-RateLimit-Remaining",
+      "81",
+      "X-RateLimit-Reset",
+      "1516044020"
+    ]
+  }
+]
