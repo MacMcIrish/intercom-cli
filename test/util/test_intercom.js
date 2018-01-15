@@ -37,7 +37,7 @@ describe("Testing Intercom", () => {
     })));
 
   it("Testing Bulk User Updating", done => nockBack('intercom-users-bulk-update.json', {}, nockDone => intercom.users
-    .updateBulk([
+    .bulk(intercom.users.update, [
       { email: 'email@email.com', name: 'First Last', user_id: '00000000000000000000000000000000' },
       { email: 'email@email.com', name: 'First Last', user_id: '00000000000000000000000000000000' },
       { email: 'email@email.com', name: 'First Last', user_id: '00000000000000000000000000000000' },
