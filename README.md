@@ -45,8 +45,8 @@ Where `<file>` is relative file path in `dir` directory, where `dir` defaults to
 #### De-Duplicate Users
 
 An issue with intercom is that by using third party software, it's possible to get into a state where users can have the same Intercom ID, with one instance without a User Id and the other with.
-Remove these duplicate users by first extracting the information from the user with the set User ID, then _deleting_ that user with the set user id. 
-Then, update the remaining user with the deleted users information.
+Remove these duplicate users by extracting duplicates with `user_id`, deleting extracted users, and updating remaining users with deleted data. 
+Then update the remaining user with the deleted users information.
 
 To remove duplicate users, first download all users by exporting straight from intercom into `out/users.csv`. Unfortunately `users fetch` will not fetch duplicate users.
 
