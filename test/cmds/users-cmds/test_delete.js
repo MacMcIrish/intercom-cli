@@ -24,6 +24,7 @@ describe("Testing Users Delete", () => {
     nockBack('intercom-bulk-delete-users.json', {}, (nockDone) => {
       deleteUsers.handler({
         file: path.basename(tmpFile.name),
+        key: 'user_id',
         dir: path.dirname(tmpFile.name)
       })
         .then(() => {
