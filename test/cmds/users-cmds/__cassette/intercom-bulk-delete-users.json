@@ -1,0 +1,27 @@
+[
+  {
+    "scope": "https://api.intercom.io:443",
+    "method": "delete",
+    "path": "/users?user_id=0123",
+    "body": "",
+    "status": 200,
+    "response": {},
+    "rawHeaders": []
+  },
+  {
+    "scope": "https://api.intercom.io:443",
+    "method": "delete",
+    "path": "/users?user_id=4567",
+    "body": "",
+    "status": 200,
+    "response": {},
+    "rawHeaders": [
+      "X-RateLimit-Limit",
+      "83",
+      "X-RateLimit-Remaining",
+      "83",
+      "X-RateLimit-Reset",
+      "1516063300"
+    ]
+  }
+]
