@@ -1,0 +1,54 @@
+[
+    {
+        "scope": "https://api.intercom.io:443",
+        "method": "delete",
+        "path": "/users?user_id=00000000000000000000000000000000",
+        "body": "",
+        "status": 200,
+        "response": {
+            "type": "user",
+            "id": "000000000000000000000000",
+            "user_id": "00000000000000000000000000000000",
+            "anonymous": false,
+            "email": "",
+            "phone": null,
+            "name": "First Last",
+            "pseudonym": null,
+            "avatar": {
+                "type": "avatar",
+                "image_url": null
+            },
+            "app_id": "00000000",
+            "companies": {
+                "type": "company.list",
+                "companies": []
+            },
+            "location_data": {},
+            "last_request_at": null,
+            "last_seen_ip": null,
+            "created_at": 1515704981,
+            "remote_created_at": null,
+            "signed_up_at": null,
+            "updated_at": 1515802819,
+            "session_count": 0,
+            "social_profiles": {
+                "type": "social_profile.list",
+                "social_profiles": []
+            },
+            "unsubscribed_from_emails": false,
+            "marked_email_as_spam": false,
+            "has_hard_bounced": false,
+            "user_agent_data": null,
+            "tags": {
+                "type": "tag.list",
+                "tags": []
+            },
+            "segments": {
+                "type": "segment.list",
+                "segments": []
+            },
+            "custom_attributes": {}
+        },
+        "rawHeaders": []
+    }
+]

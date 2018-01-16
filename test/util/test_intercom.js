@@ -35,4 +35,24 @@ describe("Testing Intercom", () => {
       nockDone();
       done();
     })));
+
+  it("Testing Bulk User Updating", done => nockBack('intercom-users-bulk-update.json', {}, nockDone => intercom.users
+    .bulk(intercom.users.update, [
+      { email: 'email@email.com', name: 'First Last', user_id: '00000000000000000000000000000000' },
+      { email: 'email@email.com', name: 'First Last', user_id: '00000000000000000000000000000000' },
+      { email: 'email@email.com', name: 'First Last', user_id: '00000000000000000000000000000000' },
+      { email: 'email@email.com', name: 'First Last', user_id: '00000000000000000000000000000000' }
+    ])
+    .then(() => {
+      done();
+      nockDone();
+    })));
+
+  it("Testing User Deleting", done => nockBack('intercom-users-delete.json', {}, nockDone => intercom.users
+    .delete({ user_id: "00000000000000000000000000000000" })
+    .then((result) => {
+      expect(result.statusCode).to.equal(200);
+      done();
+      nockDone();
+    })));
 });
