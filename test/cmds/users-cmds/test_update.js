@@ -20,7 +20,7 @@ describe("Testing Users Update", () => {
   });
 
   it("Testing Update from CSV", (done) => {
-    fs.writeFileSync(tmpFile.name, 'user_id,name\n0123,Test 1\n4567,Test 2');
+    fs.writeFileSync(tmpFile.name, 'id,user_id,name\n0123,0123,Test 1\n4567,4567,Test 2');
     nockBack('intercom-bulk-update-users.json', {}, (nockDone) => {
       update.handler({
         file: path.basename(tmpFile.name),

@@ -4,8 +4,10 @@
     "method": "post",
     "path": "/users",
     "body": {
+      "id": "0123",
       "user_id": "0123",
-      "name": "Test 1"
+      "name": "Test 1",
+      "custom_attributes": {}
     },
     "status": 200,
     "response": {},
@@ -16,8 +18,10 @@
     "method": "post",
     "path": "/users",
     "body": {
+      "id": "4567",
       "user_id": "4567",
-      "name": "Test 2"
+      "name": "Test 2",
+      "custom_attributes": {}
     },
     "status": 200,
     "response": {},
