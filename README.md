@@ -42,6 +42,28 @@ To download all users to `<file>` in `out` directory, run:
 
 Where `<file>` is relative file path in `dir` directory, where `dir` defaults to the `out` directory.
 
+#### De-Duplicate Users
+
+An issue with intercom is that by using third party software, it's possible to get into a state where users can have the same Intercom ID, with one instance without a User Id and the other with.
+Remove these duplicate users by extracting duplicates with `user_id`, deleting extracted users, and updating remaining users with deleted data. 
+Then update the remaining user with the deleted users information.
+
+To remove duplicate users, first download all users by exporting straight from intercom into `out/users.csv`. Unfortunately `users fetch` will not fetch duplicate users.
+
+**IMPORTANT**: Change the csv header "User ID" to "user_id".
+
+To extract the duplicate users to `out/duplicates.csv`, run:
+
+    $ node ./intercom-cli.js users extract-duplicates users.csv duplicates.csv
+
+Then to remove duplicate users that have a `user_id` from Intercom run:
+
+    $ node ./intercom-cli.js users delete duplicates.csv user_id --env ENVIRONMENT
+
+Once the users are deleted, update the remaining users to ensure the data is persisted.
+
+    $ node ./intercom-cli.js users update duplicates.csv --env ENVIRONMENT
+
 ## Running the tests
 
 To run the tests, run:
