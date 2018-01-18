@@ -1,0 +1,19 @@
+[
+    {
+        "scope": "https://api.intercom.io:443",
+        "method": "get",
+        "path": "/users?user_id=01234567890123456789012345678901",
+        "body": "",
+        "status": 404,
+        "response": {
+            "type": "error.list",
+            "request_id": "b11994ncvv3qqf732elg",
+            "errors": [
+                {
+                    "code": "not_found",
+                    "message": "User Not Found"
+                }
+            ]
+        }
+    }
+]

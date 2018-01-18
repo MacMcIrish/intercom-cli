@@ -31,4 +31,18 @@ describe("Testing Sync Interests", () => {
       });
     });
   });
+
+  it("Testing User Not Found", (done) => {
+    fs.writeFileSync(tmpFile1.name, 'user_id,interests\n' +
+      '01234567890123456789012345678901,"Golf,Fishing,Ball"\n');
+    nockBack('intercom-users-sync-interests-not-found.json', {}, (nockDone) => {
+      syncInterests.handler({
+        file: path.basename(tmpFile1.name),
+        dir: path.dirname(tmpFile1.name)
+      }).then((result) => {
+        nockDone();
+        done();
+      });
+    });
+  });
 });
