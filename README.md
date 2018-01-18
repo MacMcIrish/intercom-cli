@@ -42,6 +42,16 @@ To download all users to `<file>` in `out` directory, run:
 
 Where `<file>` is relative file path in `dir` directory, where `dir` defaults to the `out` directory.
 
+#### Sync Interest Tags to users
+Need input csv `out/users.csv` with columns `user_id`, `interests` where `user_id` contains the user ids and `interests` contains
+the relevant, comma separated (no spaces) interests for that user.
+
+Then call
+
+  $ node ./intercom-cli.js users sync-interests users.csv --env ENVIRONMENT
+  
+This will remove old interests from user, prefixed with `Interest: `, and add the interests provided, again prefixed with `Interest: `.
+
 #### De-Duplicate Users
 
 An issue with intercom is that by using third party software, it's possible to get into a state where users can have the same Intercom ID, with one instance without a User Id and the other with.

@@ -1,0 +1,101 @@
+[
+    {
+        "scope": "https://api.intercom.io:443",
+        "method": "get",
+        "path": "/users?user_id=01234567890123456789012345678901",
+        "body": "",
+        "status": 200,
+        "response": {
+            "user_id": "01234567890123456789012345678901",
+            "tags": {
+                "type": "tag.list",
+                "tags": [
+                    {
+                        "type": "tag",
+                        "id": "1497764",
+                        "name": "Interest: Fishing"
+                    },
+                    {
+                        "type": "tag",
+                        "id": "1227594",
+                        "name": "Interest: Golf"
+                    },
+                    {
+                        "type": "tag",
+                        "id": "1497765",
+                        "name": "Interest: Ball"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "scope": "https://api.intercom.io:443",
+        "method": "get",
+        "path": "/users?user_id=98765432109876543210987654321098",
+        "body": "",
+        "status": 200,
+        "response": {
+            "user_id": "98765432109876543210987654321098",
+            "tags": {
+                "type": "tag.list",
+                "tags": [
+                    {
+                        "type": "tag",
+                        "id": "1497764",
+                        "name": "Interest: Fishing"
+                    },
+                    {
+                        "type": "tag",
+                        "id": "1497786",
+                        "name": "Interest: Water"
+                    },
+                    {
+                        "type": "tag",
+                        "id": "1498294",
+                        "name": "Interest: Beach"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "scope": "https://api.intercom.io:443",
+        "method": "post",
+        "path": "/tags",
+        "body": {
+            "name": "Interest: Beach",
+            "users": [
+                {
+                    "user_id": "98765432109876543210987654321098",
+                    "untag": true
+                }
+            ]
+        },
+        "status": 200,
+        "response": {
+            "type": "tag",
+            "id": "1498294",
+            "name": "Interest: Beach"
+        }
+    },
+    {
+        "scope": "https://api.intercom.io:443",
+        "method": "post",
+        "path": "/tags",
+        "body": {
+            "name": "Interest: Writing",
+            "users": [
+                {
+                    "user_id": "98765432109876543210987654321098"
+                }
+            ]
+        },
+        "status": 200,
+        "response": {
+            "type": "tag",
+            "id": "1497903",
+            "name": "Interest: Writing"
+        }
+    }
+]
