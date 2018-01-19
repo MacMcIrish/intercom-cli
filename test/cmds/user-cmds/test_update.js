@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const nockBack = require('nock').back;
 const tmp = require('tmp');
-const update = require('./../../../lib/cmds/users-cmds/update');
+const update = require('./../../../lib/cmds/user-cmds/update');
 
 describe("Testing Users Update", () => {
   let tmpFile;

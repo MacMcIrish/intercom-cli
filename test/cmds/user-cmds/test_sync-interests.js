@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const nockBack = require('nock').back;
 const tmp = require('tmp');
-const syncInterests = require('./../../../lib/cmds/users-cmds/sync-interests');
+const syncInterests = require('./../../../lib/cmds/user-cmds/sync-interests');
 
 describe("Testing Sync Interests", () => {
   let tmpFile1;
