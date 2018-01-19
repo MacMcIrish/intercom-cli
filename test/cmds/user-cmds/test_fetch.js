@@ -2,7 +2,7 @@ const path = require('path');
 const expect = require("chai").expect;
 const nockBack = require('nock').back;
 const tmp = require('tmp');
-const fetch = require('./../../../lib/cmds/users-cmds/fetch');
+const fetch = require('./../../../lib/cmds/user-cmds/fetch');
 const loadFileEntries = require('./../../../lib/util/misc').loadFileEntries;
 
 describe("Testing Users Fetch", () => {

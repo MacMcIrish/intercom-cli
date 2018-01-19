@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const nockBack = require('nock').back;
 const tmp = require('tmp');
-const deleteUsers = require('./../../../lib/cmds/users-cmds/delete');
+const deleteUsers = require('./../../../lib/cmds/user-cmds/delete');
 
 describe("Testing Users Delete", () => {
   let tmpFile;

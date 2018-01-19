@@ -34,11 +34,11 @@ Where `CMD` is the command you're trying to execute and `ENVIRONMENT` correspond
 
 ### Commands
 
-#### users
+#### user
 
 To download all users to `<file>` in `out` directory, run:
 
-    $ node ./intercom-cli.js users fetch <file> [dir] --env ENVIRONMENT
+    $ node ./intercom-cli.js user fetch <file> [dir] --env ENVIRONMENT
 
 Where `<file>` is relative file path in `dir` directory, where `dir` defaults to the `out` directory.
 
@@ -48,7 +48,7 @@ the relevant, comma separated (no spaces) interests for that user.
 
 Then call
 
-  $ node ./intercom-cli.js users sync-interests users.csv --env ENVIRONMENT
+  $ node ./intercom-cli.js user sync-interests users.csv --env ENVIRONMENT
   
 This will remove old interests from user, prefixed with `Interest: `, and add the interests provided, again prefixed with `Interest: `.
 
@@ -58,21 +58,21 @@ An issue with intercom is that by using third party software, it's possible to g
 Remove these duplicate users by extracting duplicates with `user_id`, deleting extracted users, and updating remaining users with deleted data. 
 Then update the remaining user with the deleted users information.
 
-To remove duplicate users, first download all users by exporting straight from intercom into `out/users.csv`. Unfortunately `users fetch` will not fetch duplicate users.
+To remove duplicate users, first download all users by exporting straight from intercom into `out/users.csv`. Unfortunately `user fetch` will not fetch duplicate users.
 
 **IMPORTANT**: Change the csv header "User ID" to "user_id".
 
 To extract the duplicate users to `out/duplicates.csv`, run:
 
-    $ node ./intercom-cli.js users extract-duplicates users.csv duplicates.csv
+    $ node ./intercom-cli.js user extract-duplicates users.csv duplicates.csv
 
 Then to remove duplicate users that have a `user_id` from Intercom run:
 
-    $ node ./intercom-cli.js users delete duplicates.csv user_id --env ENVIRONMENT
+    $ node ./intercom-cli.js user delete duplicates.csv user_id --env ENVIRONMENT
 
 Once the users are deleted, update the remaining users to ensure the data is persisted.
 
-    $ node ./intercom-cli.js users update duplicates.csv --env ENVIRONMENT
+    $ node ./intercom-cli.js user update duplicates.csv --env ENVIRONMENT
 
 ## Running the tests
 

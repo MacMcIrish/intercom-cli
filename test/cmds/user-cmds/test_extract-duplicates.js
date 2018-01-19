@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const expect = require('chai').expect;
 const tmp = require('tmp');
-const extractDuplicates = require('./../../../lib/cmds/users-cmds/extract-duplicates');
+const extractDuplicates = require('./../../../lib/cmds/user-cmds/extract-duplicates');
 const csv = require('./../../../lib/util/csv');
 
 describe("Testing Extract Duplicates", () => {

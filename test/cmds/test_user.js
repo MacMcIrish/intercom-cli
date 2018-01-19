@@ -1,6 +1,6 @@
 const expect = require('chai').expect;
 const yargs = require('yargs');
-const user = require('./../../lib/cmds/users');
+const user = require('./../../lib/cmds/user');
 
 describe("Testing Users", () => {
   it("Testing Builder", () => {
