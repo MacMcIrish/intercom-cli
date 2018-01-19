@@ -34,6 +34,14 @@ Where `CMD` is the command you're trying to execute and `ENVIRONMENT` correspond
 
 ### Commands
 
+#### csv
+
+To filter a csv using a different csv run
+  $ node ./intercom-cli.js csv filter <fileIn> <fileFilter> <fileOut> <key> [dir] --env ENVIRONMENT
+  
+where `fileIn` is the file we want to filter, `fileFilter` is the file we use for filter and `key` is the the column
+we want to use fo filtering. The result is written to `fileOut`.
+
 #### user
 
 To download all users to `<file>` in `out` directory, run:
