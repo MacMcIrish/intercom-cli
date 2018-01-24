@@ -1,0 +1,43 @@
+[
+    {
+        "scope": "https://api.intercom.io:443",
+        "method": "post",
+        "path": "/companies",
+        "body": {
+            "company_id": "0",
+            "custom_attributes": {
+                "enabled": "false"
+            }
+        },
+        "status": 200,
+        "response": {
+            "type": "company",
+            "company_id": "0",
+            "id": "000000000000000000000000",
+            "app_id": "00000000",
+            "name": "Company Name",
+            "created_at": 1513201622,
+            "updated_at": 1516812487,
+            "last_request_at": 1513714132,
+            "monthly_spend": 0,
+            "session_count": 0,
+            "user_count": 1,
+            "tags": {
+                "type": "tag.list",
+                "tags": []
+            },
+            "segments": {
+                "type": "segment.list",
+                "segments": []
+            },
+            "plan": {},
+            "custom_attributes": {
+                "enabled": false,
+                "admin_name": "Admin Name",
+                "admin_email": "admin@admin.com",
+                "creation_source": "api"
+            }
+        },
+        "rawHeaders": []
+    }
+]

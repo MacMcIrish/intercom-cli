@@ -5,7 +5,7 @@ const intercom = require('./../../lib/util/intercom')({
   INTERCOM_TOKEN: 'test-token'
 });
 
-describe("Testing Intercom", () => {
+describe("Testing Intercom Users", () => {
   before(() => {
     nockBack.setMode('record');
     nockBack.fixtures = path.join(__dirname, "__cassette");
@@ -36,7 +36,7 @@ describe("Testing Intercom", () => {
       done();
     })));
 
-  it("Testing Bulk User Updating", done => nockBack('intercom-users-bulk-update.json', {}, nockDone => intercom.users
+  it("Testing Bulk User Updating", done => nockBack('intercom-users-bulk-update.json', {}, nockDone => intercom
     .bulk(intercom.users.update, [
       { email: 'email@email.com', name: 'First Last', user_id: '00000000000000000000000000000000' },
       { email: 'email@email.com', name: 'First Last', user_id: '00000000000000000000000000000000' },
@@ -52,6 +52,22 @@ describe("Testing Intercom", () => {
     .delete({ user_id: "00000000000000000000000000000000" })
     .then((result) => {
       expect(result.statusCode).to.equal(200);
+      done();
+      nockDone();
+    })));
+});
+
+describe("Testing Intercom Companies", () => {
+  before(() => {
+    nockBack.setMode('record');
+    nockBack.fixtures = path.join(__dirname, "__cassette");
+  });
+
+  it("Testing Update Company", done => nockBack('intercom-company-update.json', {}, nockDone => intercom.companies
+    .update({ company_id: "0", custom_attributes: { enabled: "false" } })
+    .then((result) => {
+      expect(result.statusCode).to.equal(200);
+      expect(result.body.custom_attributes.enabled).to.equal(false);
       done();
       nockDone();
     })));
