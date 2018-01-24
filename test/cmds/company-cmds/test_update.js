@@ -20,7 +20,7 @@ describe("Testing Companies Update CMD", () => {
   });
 
   it("Testing Update from CSV", (done) => {
-    fs.writeFileSync(tmpFile.name, 'company_id,name,enabled,expiration_at\n0123,company1,true,\n4567,company2,false,');
+    fs.writeFileSync(tmpFile.name, 'company_id,enabled,expiration_at\n0123,true,\n4567,false,');
     nockBack('intercom-bulk-company-update.json', {}, (nockDone) => {
       update.handler({
         file: path.basename(tmpFile.name),
