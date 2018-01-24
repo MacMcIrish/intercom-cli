@@ -1,12 +1,12 @@
-[![Build Status](https://img.shields.io/travis/MacMcIrish/intercom-cli/master.svg)](https://travis-ci.org/MacMcIrish/intercom-cli)
-[![Test Coverage](https://img.shields.io/coveralls/MacMcIrish/intercom-cli/master.svg)](https://coveralls.io/github/MacMcIrish/intercom-cli?branch=master)
-[![Greenkeeper badge](https://badges.greenkeeper.io/MacMcIrish/intercom-cli.svg)](https://greenkeeper.io/)
-[![Dependencies](https://david-dm.org/MacMcIrish/intercom-cli/status.svg)](https://david-dm.org/MacMcIrish/intercom-cli)
+[![Build Status](https://img.shields.io/travis/GetintheLoop/intercom-cli/master.svg)](https://travis-ci.org/GetintheLoop/intercom-cli)
+[![Test Coverage](https://img.shields.io/coveralls/GetintheLoop/intercom-cli/master.svg)](https://coveralls.io/github/GetintheLoop/intercom-cli?branch=master)
+[![Greenkeeper badge](https://badges.greenkeeper.io/GetintheLoop/intercom-cli.svg)](https://greenkeeper.io/)
+[![Dependencies](https://david-dm.org/GetintheLoop/intercom-cli/status.svg)](https://david-dm.org/GetintheLoop/intercom-cli)
 [![NPM](https://img.shields.io/npm/v/intercom-cli.svg)](https://www.npmjs.com/package/intercom-cli)
 [![Downloads](https://img.shields.io/npm/dt/intercom-cli.svg)](https://www.npmjs.com/package/intercom-cli)
 [![Semantic-Release](https://github.com/simlu/js-gardener/blob/master/assets/icons/semver.svg)](https://github.com/semantic-release/semantic-release)
 [![Gardener](https://github.com/simlu/js-gardener/blob/master/assets/badge.svg)](https://github.com/simlu/js-gardener)
-[![Gitter](https://github.com/simlu/js-gardener/blob/master/assets/icons/gitter.svg)](https://gitter.im/MacMcIrish/intercom-cli)
+[![Gitter](https://github.com/simlu/js-gardener/blob/master/assets/icons/gitter.svg)](https://gitter.im/GetintheLoop/intercom-cli)
 # Intercom CLI
 
 Command Line Interface for managing intercom data
