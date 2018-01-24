@@ -32,10 +32,7 @@
             },
             "plan": {},
             "custom_attributes": {
-                "enabled": false,
-                "admin_name": "Admin Name",
-                "admin_email": "admin@admin.com",
-                "creation_source": "api"
+                "enabled": false
             }
         },
         "rawHeaders": []
