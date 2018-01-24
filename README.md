@@ -45,10 +45,18 @@ we want to use for filtering. The result is written to `fileOut`.
 
 #### user
 
-To download all users to `<file>` in `out` directory, run:
+To download all users to `<file>` in `dir` directory, run:
 
     $ node ./intercom-cli.js user fetch <file> [dir] --env ENVIRONMENT
 
+Where `<file>` is relative file path in `dir` directory, where `dir` defaults to the `out` directory.
+
+#### companies
+
+To update all companies in `<file>` in `dir` directory, run:
+
+    $ node ./intercom-cli.js companies update <file> [dir] --env ENVIRONMENT
+    
 Where `<file>` is relative file path in `dir` directory, where `dir` defaults to the `out` directory.
 
 #### Sync Interest Tags to users
