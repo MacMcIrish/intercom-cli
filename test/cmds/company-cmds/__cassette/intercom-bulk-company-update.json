@@ -1,0 +1,32 @@
+[
+  {
+    "scope": "https://api.intercom.io:443",
+    "method": "post",
+    "path": "/companies",
+    "body": {
+      "company_id": "0123",
+      "custom_attributes": {
+        "enabled": "true",
+        "expiration_at": ""
+      }
+    },
+    "status": 200,
+    "response": {},
+    "rawHeaders": []
+  },
+  {
+    "scope": "https://api.intercom.io:443",
+    "method": "post",
+    "path": "/companies",
+    "body": {
+      "company_id": "4567",
+      "custom_attributes": {
+        "enabled": "false",
+        "expiration_at": ""
+      }
+    },
+    "status": 200,
+    "response": {},
+    "rawHeaders": []
+  }
+]
